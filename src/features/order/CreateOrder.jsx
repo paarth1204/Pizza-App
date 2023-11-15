@@ -41,7 +41,7 @@ function CreateOrder() {
   if (!cart.length) return <EmptyCart />;
 
   return (
-    <div className="px-4 py-6">
+    <div className="px-4 py-6 dark:text-stone-200">
       <h2 className="mb-8 text-xl font-semibold">Ready to order? Lets go!</h2>
 
       {/* <Form method="POST" action="/order/new"> */}
@@ -52,7 +52,7 @@ function CreateOrder() {
             type="text"
             name="customer"
             defaultValue={userName}
-            className="input grow"
+            className="input grow text-stone-700"
             required
           />
         </div>
@@ -60,7 +60,12 @@ function CreateOrder() {
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
           <label className="sm:basis-40">Phone number</label>
           <div className="grow">
-            <input type="tel" className="input w-full" name="phone" required />
+            <input
+              type="tel"
+              className="input w-full text-stone-700 "
+              name="phone"
+              required
+            />
             {formErrors?.phone && (
               <p className="mt-2 rounded-md bg-red-100 p-2 text-xs text-red-700">
                 {formErrors.phone}
@@ -73,7 +78,7 @@ function CreateOrder() {
           <label className="sm:basis-40">Address</label>
           <div className="grow">
             <input
-              className="input w-full"
+              className="input w-full text-stone-700"
               type="text"
               name="address"
               disabled={isLoadingAddress}

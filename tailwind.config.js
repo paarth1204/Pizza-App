@@ -1,16 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     fontFamily: {
-      sans: "Roboto Mono, monospace",
+      sans: 'Roboto Mono, monospace',
     },
     extend: {
       colors: {
-        pizza: "#123456",
+        pizza: '#123456',
       },
       height: {
-        screen: "100dvh",
+        screen: '100dvh',
       },
     },
   },
